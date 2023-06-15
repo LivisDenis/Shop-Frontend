@@ -1,8 +1,3 @@
+const Home = () => <main className='' />;
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      next
-    </main>
-  )
-}
+export default Home;
