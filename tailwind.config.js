@@ -15,6 +15,18 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      container: {
+        center: true,
+        padding: '15px',
+      },
+      colors: {
+        custom: {
+          red: '#ED1331',
+          black: '#1D1D1D',
+          gray: '#565656',
+          green: '#13ED1C',
+        }
+      }
     },
   },
   plugins: [require("daisyui")],

@@ -1,28 +1,28 @@
 import Link from 'next/link';
 
+import { Discount } from '@/components/Discount';
 import { Heart, User, Search, Bag, Location } from '@/components/svg';
-import {Discount} from "@/components/Discount";
+import { ROUTES } from '@/src/utils';
 
 const icons = [
-  { path: '/search', element: <Search /> },
-  { path: '/profile', element: <User /> },
-  { path: '/favourite', element: <Heart /> },
-  { path: '/basket', element: <Bag /> }
+  { path: ROUTES.SEARCH, element: <Search /> },
+  { path: ROUTES.PROFILE, element: <User /> },
+  { path: ROUTES.FAVOURITE, element: <Heart /> },
+  { path: ROUTES.BASKET, element: <Bag /> }
 ];
 const genders = [
-  { path: '/sale', element: 'Sale' },
-  { path: '/woman', element: 'Женщинам' },
-  { path: '/man', element: 'Мужчинам' },
-  { path: '/child', element: 'детям' }
+  { path: ROUTES.WOMAN, element: 'Женщинам' },
+  { path: ROUTES.MAN, element: 'Мужчинам' },
+  { path: ROUTES.CHILD, element: 'детям' }
 ];
 
 export const Navbar = () => (
   <header>
     <Discount>Lorem ipsum is placeholder text commonly used -20%</Discount>
-    <div className='bg-black'>
-      <div className='container mx-auto px-[15px] flex justify-between items-center mx-auto'>
+    <div className='bg-custom-black'>
+      <div className='container flex justify-between items-center mx-auto'>
         <div className='flex items-center text-white'>
-          <Link href='' className='btn btn-ghost normal-case text-xl mr-[30px]'>
+          <Link href='/' className='btn btn-ghost normal-case text-xl mr-[30px]'>
             LivisShop
           </Link>
           <div className='flex uppercase'>
@@ -30,14 +30,20 @@ export const Navbar = () => (
             москва
           </div>
         </div>
-        <div className='grid grid-flow-col uppercase [&_a]:py-[29px] [&_a]:px-[34px] [&_a:hover]:bg-gray-600 text-white'>
+        <div className='grid grid-flow-col items-center uppercase [&_a:not(:first-child)]:py-[29px] [&_a:not(:first-child)]:px-[34px] [&_a:not(:first-child):hover]:bg-neutral-800 text-white'>
+          <Link
+            href={ROUTES.SALE}
+            className='py-[13px] px-[27px] rounded-3xl bg-custom-red hover:bg-red-700 mr-[30px]'
+          >
+            Sale
+          </Link>
           {genders.map((gender) => (
             <Link href={gender.path}>{gender.element}</Link>
           ))}
         </div>
         <div className='grid grid-flow-col items-center [&_a]:py-[17px] [&_a]:px-[10px]'>
           {icons.map((icon) => (
-            <Link key={icon.path} href={icon.path} className='stroke-white hover:stroke-blue-400'>
+            <Link key={icon.path} href={icon.path} className='stroke-white hover:stroke-custom-red'>
               {icon.element}
             </Link>
           ))}
