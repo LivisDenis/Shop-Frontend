@@ -1,6 +1,4 @@
-import Link from 'next/link';
-
-import { ROUTES } from '@/src/utils';
+import { Navbar } from '@/app/profile/Navbar';
 
 const profileInfo = [
   { label: 'Контакты', value: '+7 (999) 999-99-99' },
@@ -23,17 +21,9 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => (
       </div>
     </div>
     <div className='mt-[85px] flex'>
-      <nav className='mr-[165px]'>
+      <nav className='pl-[21px] mr-[165px]'>
         <ul className='grid grid-flow-rows gap-[24px] [&_li]:font-medium [&_li:hover]:text-gray-400 text-custom-gray'>
-          <li>
-            <Link href={ROUTES.PROFILE}>Личные данные</Link>
-          </li>
-          <li>
-            <Link href={ROUTES.ORDERS}>Заказы</Link>
-          </li>
-          <li>
-            <Link href={ROUTES.FAVOURITE}>Избранное</Link>
-          </li>
+          <Navbar />
           <li>
             <button type='button'>Выйти</button>
           </li>
