@@ -30,6 +30,10 @@ module.exports = {
     },
     plugins: ["react", "@typescript-eslint", "prettier"],
     rules: {
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "controlComponents": ["Input"],
+            "depth": 3,
+        }],
         'react/destructuring-assignment': 'warn',
         'import/no-extraneous-dependencies': 'off',
         'react/no-array-index-key': 'warn',
