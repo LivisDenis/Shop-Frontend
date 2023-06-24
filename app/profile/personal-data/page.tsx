@@ -1,29 +1,14 @@
-import { AlertInfo, Button, Input } from '@/components';
+import { Address } from '@/app/profile/personal-data/Address';
+import { ChangePassword } from '@/app/profile/personal-data/ChangePassword';
+import { PaymentMethod } from '@/app/profile/personal-data/PaymentMethod';
+import { PersonalData } from '@/app/profile/personal-data/PersonalData';
 
 const InfoPage = () => (
-  <div className='w-full max-w-[768px]'>
-    <h2 className='text-[20px] font-semibold'>Личные данные</h2>
-    <AlertInfo>Подтвердите адрес электронной почты.</AlertInfo>
-    <form>
-      <div className='grid gap-y-[20px]'>
-        <Input label='Имя' required />
-        <Input label='Фамилия' required />
-        <Input label='Электронная почта' required />
-        <Input label='Телефон' required />
-        <Input label='Дата рождения' required />
-      </div>
-      <div className='grid gap-y-[15px] mt-[32px]'>
-        <div className='flex items-center'>
-          <input type='radio' name='radio-1' className='radio mr-[15px]' />
-          <span>Я согласен с политикой обработки персональных данных</span>
-        </div>
-        <div className='flex items-center'>
-          <input type='radio' name='radio-1' className='radio mr-[15px]' />
-          <span>Получать электронные чеки при покупке в рознице</span>
-        </div>
-      </div>
-      <Button>Сохранить изменения</Button>
-    </form>
+  <div className='w-full grid grid-flow-row gap-y-[32px] max-w-[768px] divide-y divide-gray-400 pb-[32px] border-b border-gray-400'>
+    <PersonalData />
+    <Address />
+    <PaymentMethod />
+    <ChangePassword />
   </div>
 );
 

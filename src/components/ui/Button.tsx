@@ -1,15 +1,17 @@
 import { type ComponentPropsWithRef } from 'react';
 
-interface ButtonProps {
+interface ButtonProps extends ComponentPropsWithRef<'button'> {
   children: string;
-  props?: ComponentPropsWithRef<'button'>;
+  className?: string;
 }
-export const Button = ({ children, ...props }: ButtonProps) => (
-  <button
-    type='button'
-    className='btn rounded-[50px] py-[16px] px-[24px] font-semibold bg-custom-gray text-white'
-    {...props}
-  >
-    {children}
-  </button>
-);
+
+export const Button = ({ children, className, type = 'button', ...props }: ButtonProps) => {
+  const buttonClasses = `btn btn-neutral rounded-[50px] py-[16px] px-[24px] font-semibold bg-custom-gray text-white ${
+    className ?? ''
+  }`;
+  return (
+    <button type={type} className={buttonClasses} {...props}>
+      {children}
+    </button>
+  );
+};

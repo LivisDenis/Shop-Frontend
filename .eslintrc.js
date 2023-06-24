@@ -34,6 +34,7 @@ module.exports = {
             "controlComponents": ["Input"],
             "depth": 3,
         }],
+        'react/button-has-type': 0,
         'react/destructuring-assignment': 'warn',
         'import/no-extraneous-dependencies': 'off',
         'react/no-array-index-key': 'warn',

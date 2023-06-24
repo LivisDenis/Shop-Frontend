@@ -11,7 +11,7 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => (
   <div className='container mt-[30px]'>
     <div className='pb-[44px] border-b border-gray-400'>
       <h1 className='text-center text-[32px]'>Мой профиль</h1>
-      <div className='grid grid-flow-col divide-x divide-gray-400 divide-gray-950 mt-[60px] max-w-[1150px] mx-auto'>
+      <div className='grid grid-flow-col divide-x divide-gray-400 mt-[60px] max-w-[1150px] mx-auto'>
         {profileInfo.map((info) => (
           <div key={info.label} className='flex flex-col items-center'>
             <p className='mb-[15px] text-custom-gray'>{info.label}</p>

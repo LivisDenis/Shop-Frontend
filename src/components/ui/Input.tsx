@@ -1,12 +1,11 @@
 import { type ComponentPropsWithRef } from 'react';
 
-interface InputProps {
+interface InputProps extends ComponentPropsWithRef<'input'> {
   label?: string;
   required?: boolean;
-  props?: ComponentPropsWithRef<'input'>;
 }
 
-export const Input = ({ label, required, props }: InputProps) => (
+export const Input = ({ label, required, ...props }: InputProps) => (
   <div className='form-control w-full'>
     {label && (
       <label className='label uppercase'>
