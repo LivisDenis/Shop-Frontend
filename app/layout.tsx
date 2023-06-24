@@ -1,6 +1,6 @@
 import { Montserrat } from 'next/font/google';
 
-import { Navbar } from '@/components';
+import { Footer, Header } from '@/components';
 
 import './globals.css';
 
@@ -14,8 +14,9 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang='en' data-theme='light'>
     <body className={`${inter.className}`}>
-      <Navbar />
+      <Header />
       {children}
+      <Footer />
     </body>
   </html>
 );

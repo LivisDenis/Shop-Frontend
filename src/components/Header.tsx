@@ -16,7 +16,7 @@ const genders = [
   { path: ROUTES.CHILD, element: 'детям' }
 ];
 
-export const Navbar = () => (
+export const Header = () => (
   <header>
     <Discount>Lorem ipsum is placeholder text commonly used -20%</Discount>
     <div className='bg-custom-black'>

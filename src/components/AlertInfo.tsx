@@ -7,7 +7,7 @@ interface AlertProps {
 
 export const AlertInfo = ({ children, colorBG }: AlertProps) => {
   const color = classnames(
-    { 'bg-custom-blue bg-opacity-20 text-custom-blue': colorBG === 'blue' },
+    { 'bg-custom-blue bg-opacity-5 text-custom-blue': colorBG === 'blue' },
     { 'text-custom-gray': colorBG === 'gray' }
   );
   return (
