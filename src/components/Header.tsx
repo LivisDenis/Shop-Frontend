@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 import { Discount } from '@/components/Discount';
-import { Heart, User, Search, Bag, Location } from '@/components/svg';
+import { Favourite, User, Search, Bag, Location } from '@/components/svg';
 import { ROUTES } from '@/src/utils';
 
 const icons = [
   { path: ROUTES.SEARCH, element: <Search /> },
   { path: ROUTES.PROFILE, element: <User /> },
-  { path: ROUTES.FAVOURITE, element: <Heart /> },
+  { path: ROUTES.FAVOURITE, element: <Favourite /> },
   { path: ROUTES.BASKET, element: <Bag /> }
 ];
 const genders = [
@@ -37,8 +37,10 @@ export const Header = () => (
           >
             Sale
           </Link>
-          {genders.map((gender) => (
-            <Link href={gender.path}>{gender.element}</Link>
+          {genders.map((gender, i) => (
+            <Link key={i} href={gender.path}>
+              {gender.element}
+            </Link>
           ))}
         </div>
         <div className='grid grid-flow-col items-center [&_a]:py-[17px] [&_a]:px-[10px]'>

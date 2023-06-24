@@ -1,4 +1,4 @@
-export * from './Heart';
+export * from './Favourite';
 export * from './User';
 export * from './Search';
 export * from './Bag';
