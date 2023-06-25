@@ -17,7 +17,7 @@ export const Navbar = () => {
   return (
     <>
       {navbar.map((item) => (
-        <li key={item.path} className='flex items-center relative'>
+        <li key={item.path} className='flex items-center relative whitespace-nowrap'>
           {pathname === item.path && (
             <span className='block absolute left-[-20px] w-2 h-2 rounded-[5px] bg-custom-gray' />
           )}

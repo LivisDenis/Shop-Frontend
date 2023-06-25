@@ -14,11 +14,11 @@ export const PersonalData = () => (
       </div>
       <div className='grid gap-y-[15px] mt-[32px]'>
         <div className='flex items-center'>
-          <input type='radio' name='radio-1' className='radio mr-[15px]' />
+          <input type='checkbox' className='checkbox mr-[15px]' />
           <span>Я согласен с политикой обработки персональных данных</span>
         </div>
         <div className='flex items-center'>
-          <input type='radio' name='radio-1' className='radio mr-[15px]' />
+          <input type='checkbox' className='checkbox mr-[15px]' />
           <span>Получать электронные чеки при покупке в рознице</span>
         </div>
       </div>

@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
 import { Bag, Favourite } from '@/components/svg';
 
 interface CardProps {
   type: boolean;
   price: string;
-  image: string;
+  image: string | StaticImageData;
   brand: string;
   about: string;
 }
