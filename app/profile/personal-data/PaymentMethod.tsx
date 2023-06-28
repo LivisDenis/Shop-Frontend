@@ -6,7 +6,7 @@ export const PaymentMethod = () => (
     <AlertInfo colorBG='gray'>Банковская карта для возврата не привязана!</AlertInfo>
     <form>
       <Button type='button' className='mt-[30px]'>
-        Сохранить адрес
+        Привязать карту
       </Button>
     </form>
   </div>

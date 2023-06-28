@@ -13,14 +13,14 @@ export const PersonalData = () => (
         <Input label='Дата рождения' required />
       </div>
       <div className='grid gap-y-[15px] mt-[32px]'>
-        <div className='flex items-center'>
+        <label className='flex items-center'>
           <input type='checkbox' className='checkbox mr-[15px]' />
           <span>Я согласен с политикой обработки персональных данных</span>
-        </div>
-        <div className='flex items-center'>
+        </label>
+        <label className='flex items-center'>
           <input type='checkbox' className='checkbox mr-[15px]' />
           <span>Получать электронные чеки при покупке в рознице</span>
-        </div>
+        </label>
       </div>
       <Button type='button' className='mt-[30px]'>
         Сохранить изменения

@@ -1,10 +1,9 @@
-import { AlertInfo, Button, Input } from '@/components';
+import { Button, Input } from '@/components';
 
 export const ChangePassword = () => (
   <div className='pt-[32px]'>
     <h2 className='text-[20px] font-semibold'>Смена пароля</h2>
-    <AlertInfo colorBG='gray'>Банковская карта для возврата не привязана!</AlertInfo>
-    <form>
+    <form className='mt-[26px]'>
       <Input label='Ваш текущий пароль' />
       <Button type='button' className='mt-[30px]'>
         Сменить пароль
