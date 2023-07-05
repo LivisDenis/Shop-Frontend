@@ -11,7 +11,7 @@ export const Input = ({ label, required, ...props }: InputProps) => {
   return (
     <div className='form-control w-full'>
       {label && (
-        <label className='label uppercase' htmlFor={id}>
+        <label className='label uppercase text-[14px]' htmlFor={id}>
           <span>
             {label}
             {required && <span className='text-custom-red'>*</span>}
@@ -22,7 +22,7 @@ export const Input = ({ label, required, ...props }: InputProps) => {
         type='text'
         id={id}
         {...props}
-        className='input input-bordered border-custom-gray w-full rounded-[50px]'
+        className='input input-bordered border-custom-gray text-[18px] w-full rounded-[50px]'
       />
     </div>
   );

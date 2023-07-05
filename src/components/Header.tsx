@@ -17,7 +17,7 @@ const genders = [
 ];
 
 export const Header = () => (
-  <header>
+  <header className='text-[14px]'>
     <Discount>Lorem ipsum is placeholder text commonly used -20%</Discount>
     <div className='bg-custom-black'>
       <div className='container flex justify-between items-center mx-auto'>
