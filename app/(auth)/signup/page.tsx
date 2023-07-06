@@ -7,9 +7,7 @@ import Link from 'next/link';
 import { Button, Input } from '@/components';
 import { ROUTES } from '@/src/utils';
 
-interface SignUpProps {}
-
-const SignUp = ({}: SignUpProps) => (
+const SignUp = () => (
   <div className='p-[40px]'>
     <h2 className='text-center mb-[30px] text-[32px] font-semibold'>Регистрация</h2>
     <form>

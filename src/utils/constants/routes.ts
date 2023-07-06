@@ -1,4 +1,5 @@
 export const ROUTES = {
+  MAIN: '/',
   PROFILE: '/profile/personal-data',
   FAVOURITE: '/profile/favourite',
   ORDERS: '/profile/orders',
